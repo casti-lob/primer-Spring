@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Calculadora</h1>
+<!--<p  th:text="${resultado}"></p> -->>
+
+<form th:action="@{/calculadora/submit}"
+th:object="${calc}" method="post">
+	
+	
+	Numero 1 <input id="number1" th:field="*{number1}" type="number" name="number1">
+	Operador <select th:field="*{operador}" name="operator">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+			</select>
+		
+	Numero 2 <input th:field="*{number2}" type="number" name="number2">
+	
+	<button>Calcular</button>
+	
+</form>
+</body>
+</html>
