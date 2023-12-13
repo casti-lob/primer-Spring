@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<h1>Calcula tu potencia electrica</h1>
+	<form th:action="@{/miPotencia/submit}"
+		th:object="${myPotencia}" method="post"
+	>
+		<p>Voltios <input  type="number" th:field="*{voltios}"   step="0.1"></p>
+
+		<p>Amperios <input type="number" th:field="*{amperios}" step="0.1"></p>
+		
+		<button type="submit">Calcula tu potencia</button>
+	</form>
+	<p th:text="${resultado}"></p>
+	
+</body>
+
+</html>

@@ -25,24 +25,24 @@ public class Calculadora {
 
 
 	
-	public int result() {
-		int result = 0;
+	public String result() {
+		String result = "";
 		switch (operador) {
 		case '+': {
 			
-			result = this.number1+this.number2;
+			result ="El resultado de "+this.number1+" "+ this.operador+" "+this.number2+" = "+ (this.number1+this.number2);
 			break;
 		}case '-': {
 			
-			result = this.number1-this.number2;
+			result ="El resultado de "+this.number1+" "+ this.operador+" "+this.number2+" = "+ (this.number1-this.number2);
 			break;
 		}case '*': {
 			
-			result = this.number1*this.number2;
+			result ="El resultado de "+this.number1+" "+ this.operador+" "+this.number2+" = "+ (this.number1*this.number2);
 			break;
 		}case '/': {
 			
-			result = this.number1/this.number2;
+			result ="El resultado de "+this.number1+" "+ this.operador+" "+this.number2+" = "+ (this.number1/this.number2);
 			break;
 		}	
 	}
